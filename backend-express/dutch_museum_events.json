@@ -1,0 +1,87 @@
+[
+  {
+    "museum": "Rijksmuseum",
+    "events": [
+      {
+        "event": "Rembrandt Exhibition",
+        "date": "2024-07-15",
+        "longitude": 4.885219,
+        "latitude": 52.360007
+      },
+      {
+        "event": "Dutch Masters",
+        "date": "2024-08-20",
+        "longitude": 4.885219,
+        "latitude": 52.360007
+      }
+    ]
+  },
+  {
+    "museum": "Van Gogh Museum",
+    "events": [
+      {
+        "event": "Van Gogh's Sunflowers",
+        "date": "2024-08-10",
+        "longitude": 4.881100,
+        "latitude": 52.358416
+      },
+      {
+        "event": "Van Gogh and Japan",
+        "date": "2024-09-15",
+        "longitude": 4.881100,
+        "latitude": 52.358416
+      }
+    ]
+  },
+  {
+    "museum": "Anne Frank House",
+    "events": [
+      {
+        "event": "Anne Frank: A History for Today",
+        "date": "2024-09-05",
+        "longitude": 4.883160,
+        "latitude": 52.375218
+      },
+      {
+        "event": "Diary of Anne Frank",
+        "date": "2024-10-12",
+        "longitude": 4.883160,
+        "latitude": 52.375218
+      }
+    ]
+  },
+  {
+    "museum": "Stedelijk Museum",
+    "events": [
+      {
+        "event": "Modern Art Collection",
+        "date": "2024-06-25",
+        "longitude": 4.879566,
+        "latitude": 52.358346
+      },
+      {
+        "event": "Photography Exhibition",
+        "date": "2024-07-30",
+        "longitude": 4.879566,
+        "latitude": 52.358346
+      }
+    ]
+  },
+  {
+    "museum": "Mauritshuis",
+    "events": [
+      {
+        "event": "Girl with a Pearl Earring",
+        "date": "2024-07-20",
+        "longitude": 4.313565,
+        "latitude": 52.080985
+      },
+      {
+        "event": "Dutch Golden Age",
+        "date": "2024-08-18",
+        "longitude": 4.313565,
+        "latitude": 52.080985
+      }
+    ]
+  }
+]
