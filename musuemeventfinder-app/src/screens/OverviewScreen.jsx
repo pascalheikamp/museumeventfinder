@@ -1,14 +1,14 @@
 import {StyleSheet, Text, View} from "react-native";
 import MuseumOverviewList from "../components/musuem/MuseumOverviewList";
 
-const OverviewScreen = ()=> {
+const OverviewScreen = ({navigation})=> {
     return (
         <View style={styles.Body}>
         <View style={styles.Container}>
             <View style={styles.HeaderSection}>
                 <Text style={styles.Title}>Museum events</Text>
             </View>
-            <MuseumOverviewList/>
+            <MuseumOverviewList navigation={navigation}/>
         </View>
         </View>
     )

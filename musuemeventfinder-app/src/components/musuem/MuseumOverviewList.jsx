@@ -2,7 +2,7 @@ import {FlatList, SafeAreaView, View, TouchableHighlight, StyleSheet, Pressable}
 import useFetch from "../../hooks/useFetch";
 import MusuemOviewCard from "./MusuemOviewCard";
 
-const MuseumOverviewList = () => {
+const MuseumOverviewList = ({navigation}) => {
     const museums = useFetch('https://raw.githubusercontent.com/pascalheikamp/museumeventfinder/main/musuemeventfinder-app/dutch_museum_events.json');
     const museumEvents = museums.data
     console.log(museumEvents);
@@ -14,8 +14,8 @@ const MuseumOverviewList = () => {
                           data={museumEvents}
                           numColumns={1}
                           horizontal={false}
-                          renderItem={({item}) => <TouchableHighlight className={""}><MusuemOviewCard
-                              title={item.museum} events={item.events}/></TouchableHighlight>}
+                          renderItem={({item}) => <TouchableHighlight className={""}><MusuemOviewCard navigation={navigation}
+                              title={item.museum}  long={item.longitude} lat={item.latitude} events={item.events}/></TouchableHighlight>}
                 />
             </View>
         </SafeAreaView>

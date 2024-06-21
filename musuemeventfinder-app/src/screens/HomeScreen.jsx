@@ -1,21 +1,24 @@
 import {Pressable, StyleSheet, Text, View} from "react-native";
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 import MapView, {Marker} from "react-native-maps";
 import * as Location from 'expo-location';
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({navigation, route}) => {
+    const {longitude, latitude} = route.params || {};
+    const mapRef = useRef(null);
     const [location, setLocation] = useState(null);
     const [errorMsg, setErrorMsg] = useState(null);
 
     useEffect(() => {
         (async () => {
-            let { status } = await Location.requestForegroundPermissionsAsync();
+            let {status} = await Location.requestForegroundPermissionsAsync();
             if (status !== 'granted') {
                 setErrorMsg('Permission to access location was denied');
                 return;
             }
 
             let location = await Location.getCurrentPositionAsync({});
+            const newData = {latitude:latitude}
             setLocation(location);
         })();
     }, []);
@@ -26,22 +29,38 @@ const HomeScreen = ({navigation}) => {
     } else if (location) {
         text = JSON.stringify(location);
     }
+    useEffect(() => {
+        if (latitude && longitude) {
+            setLocation((prevRegion) => ({
+                ...prevRegion,
+                latitude,
+                longitude,
+            }));
+        }
+
+        if(mapRef.current) {
+            mapRef.current.animateToRegion(location, 1000)
+        }
+    }, [latitude, longitude]);
+    //
     return (
         <View style={styles.container}>
             {location ? (
                 <MapView
+                    ref={mapRef}
                     style={styles.map}
-                    initialRegion={{
-                        latitude: location.coords.latitude,
-                        longitude: location.coords.longitude,
+                    // onRegionChangeComplete={(location) => setLocation(location)}
+                    Region={{
+                        latitude: longitude && latitude === undefined ?location.coords.latitude : latitude,
+                        longitude: longitude && latitude === undefined ?location.coords.latitude : longitude,
                         latitudeDelta: 0.0922,
                         longitudeDelta: 0.0421,
                     }}
                 >
                     <Marker
                         coordinate={{
-                            latitude: location.coords.latitude,
-                            longitude: location.coords.longitude,
+                            latitude: longitude && latitude === undefined ?location.coords.latitude : latitude,
+                            longitude: longitude && latitude === undefined ?location.coords.latitude : longitude,
                         }}
                         title="Your Location"
                     />
@@ -60,8 +79,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     map: {
-        width:'100%',
-        height:"100%"
+        width: '100%',
+        height: "100%"
     }
 })
 

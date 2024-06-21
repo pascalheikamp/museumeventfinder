@@ -1,8 +1,7 @@
 import {StyleSheet, Image, Text, View, Button, Pressable} from "react-native";
 import HeaderImage from '../../../assets/rijksmusuem.jpg'
 
-const MusuemOviewCard = ({title, navigate, id, events}) => {
-
+const MusuemOviewCard = ({title, navigation, id, events, long, lat}) => {
     return(
         <View style={styles.DetailCard}>
             <View style={styles.DetailCardHeader}>
@@ -10,8 +9,8 @@ const MusuemOviewCard = ({title, navigate, id, events}) => {
             </View>
             <Text style={styles.HeaderTitle}>{title}</Text>
             <View style={styles.ButtonContainer}>
-                <Pressable style={styles.NavigateButton} onPress={() => {alert("Hello")}}><Text style={styles.ButtonText}>Show on maps</Text></Pressable>
-                <Pressable style={styles.NavigateButton} onPress={() => {navigate.navigate("events", {id: id})}}><Text style={styles.ButtonText}>Check events</Text></Pressable>
+                <Pressable style={styles.NavigateButton} onPress={() => {navigation.navigate("Home", {longitude:long, latitude:lat})}}><Text style={styles.ButtonText}>Show on maps</Text></Pressable>
+                <Pressable style={styles.NavigateButton} onPress={() => {navigation.navigate("Events")}}><Text style={styles.ButtonText}>Check events</Text></Pressable>
             </View>
         </View>
     )
