@@ -1,9 +1,15 @@
 import {StyleSheet, Text, View} from "react-native";
+import MuseumOverviewList from "../components/musuem/MuseumOverviewList";
 
 const OverviewScreen = ()=> {
     return (
+        <View style={styles.Body}>
         <View style={styles.Container}>
-            <Text>Hello</Text>
+            <View style={styles.HeaderSection}>
+                <Text style={styles.Title}>Museum events</Text>
+            </View>
+            <MuseumOverviewList/>
+        </View>
         </View>
     )
 }
@@ -11,14 +17,24 @@ const OverviewScreen = ()=> {
 export default OverviewScreen;
 
 const styles = StyleSheet.create({
-    Container: {
+
+    Body: {
         flex:1,
-        width:300,
-        paddingBottom: 400,
-        marginLeft:"auto",
-        marginRight:"auto",
+    },
+
+    HeaderSection: {
+      display:"relative",
+        top:60
+    },
+
+    Title: {
+        fontSize:25,
+        paddingLeft:10
+    },
+    Container: {
+        paddingBottom:40,
         backgroundColor: "white",
         justifyContent: "center",
-        display: "flex"
+        display: "flex",
     }
 })

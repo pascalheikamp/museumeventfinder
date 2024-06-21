@@ -1,6 +1,9 @@
 [
   {
     "museum": "Rijksmuseum",
+    "_id": "efc848d9-6f39-4931-ac76-0ff7406210ba",
+    "longitude": 4.885278,
+    "latitude": 52.360001,
     "events": [
       {
         "event": "Rembrandt Exhibition",
@@ -18,6 +21,9 @@
   },
   {
     "museum": "Van Gogh Museum",
+    "_id": "92260e88-4ae0-4a93-bba2-099282a22361",
+    "longitude": 4.881124,
+    "latitude": 52.358059,
     "events": [
       {
         "event": "Van Gogh's Sunflowers",
@@ -35,6 +41,9 @@
   },
   {
     "museum": "Anne Frank House",
+    "longitude": 4.883928,
+    "latitude": 52.375191,
+    "_id": "9681c3fe-fa1f-4097-b125-d9aee71c3a73",
     "events": [
       {
         "event": "Anne Frank: A History for Today",
@@ -52,6 +61,9 @@
   },
   {
     "museum": "Stedelijk Museum",
+    "longitude": 4.879665,
+    "latitude": 52.358009,
+    "_id": "808a69b2-ec95-406e-a70d-948da883f5c2",
     "events": [
       {
         "event": "Modern Art Collection",
@@ -69,6 +81,9 @@
   },
   {
     "museum": "Mauritshuis",
+    "longitude":4.3143013 ,
+    "latitude": 52.0804205,
+    "_id": "24e37c4b-18bb-4bc1-be66-d93b201ccecf",
     "events": [
       {
         "event": "Girl with a Pearl Earring",
