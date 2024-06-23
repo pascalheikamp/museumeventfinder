@@ -10,7 +10,7 @@ const MusuemOviewCard = ({title, navigation, id, events, long, lat}) => {
             <Text style={styles.HeaderTitle}>{title}</Text>
             <View style={styles.ButtonContainer}>
                 <Pressable style={styles.NavigateButton} onPress={() => {navigation.navigate("Home", {longitude:long, latitude:lat})}}><Text style={styles.ButtonText}>Show on maps</Text></Pressable>
-                <Pressable style={styles.NavigateButton} onPress={() => {navigation.navigate("Events")}}><Text style={styles.ButtonText}>Check events</Text></Pressable>
+                <Pressable style={styles.NavigateButton} onPress={() => {navigation.navigate("Events", {id: id, events:events, name:title})}}><Text style={styles.ButtonText}>Check events</Text></Pressable>
             </View>
         </View>
     )
