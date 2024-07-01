@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View} from "react-native";
 import MuseumOverviewList from "../components/musuem/MuseumOverviewList";
 
-const OverviewScreen = ({navigation})=> {
+const MuseumScreen = ({navigation})=> {
     return (
         <View style={styles.Body}>
         <View style={styles.Container}>
@@ -14,7 +14,7 @@ const OverviewScreen = ({navigation})=> {
     )
 }
 
-export default OverviewScreen;
+export default MuseumScreen;
 
 const styles = StyleSheet.create({
 

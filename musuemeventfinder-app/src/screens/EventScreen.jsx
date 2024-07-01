@@ -6,13 +6,13 @@ function EventScreen ({route}) {
     const {id, events, name} = route.params || {};
 
     const currentEvents = events.map((e) => (e.event));
-    console.log(events)
+    console.log(currentEvents)
 
     return (
         <View style={styles.Container}>
             <Text>The events of {name}</Text>
-            <SimpleGrid
-                itemDimension={160}
+            <FlatGrid
+                itemDimension={200}
                 data={currentEvents}
                 renderItem={({ item }) => (<View style={styles.EventCard}><Text>{item}</Text></View>)}
             />
@@ -26,8 +26,9 @@ const styles =  StyleSheet.create({
         alignItems:"center"
     },
     EventCard: {
+        paddingTop: "10%",
         backgroundColor:"white",
-        height:"60%"
+        height:"80%"
     }
 })
 export default EventScreen;
