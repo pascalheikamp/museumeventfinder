@@ -1,11 +1,11 @@
 import {StyleSheet, Image, Text, View, Button, Pressable} from "react-native";
 import HeaderImage from '../../../assets/rijksmusuem.jpg'
 
-const MusuemOviewCard = ({title, navigation, id, events, long, lat}) => {
+const MusuemOviewCard = ({title, img, navigation, id, events, long, lat}) => {
     return(
         <View style={styles.DetailCard}>
             <View style={styles.DetailCardHeader}>
-                <Image style={styles.ImageHeader} source={HeaderImage}/>
+                <Image style={styles.ImageHeader} source={{uri:img}}/>
             </View>
             <Text style={styles.HeaderTitle}>{title}</Text>
             <View style={styles.ButtonContainer}>

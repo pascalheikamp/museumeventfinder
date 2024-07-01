@@ -8,19 +8,19 @@
     "events": [
       {
         "event": "Rembrandt Exhibition",
-        "date": "2024-07-15",
+        "description": "A comprehensive exhibition showcasing the works of Rembrandt.",
+        "image_url": "https://i.guim.co.uk/img/media/550d1c5bf2649d7c3807a8df420bb1121db876c7/103_417_2849_1710/master/2849.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=9409bc24ef2e2c9a0a2976845da4296c",
+        "begin_time": "2024-07-15T10:00:00",
+        "end_time": "2024-07-15T18:00:00",
         "longitude": 4.885219,
         "latitude": 52.360007
       },
       {
         "event": "Dutch Masters",
-        "date": "2024-08-20",
-        "longitude": 4.885219,
-        "latitude": 52.360007
-      },
-      {
-        "event": "Art science-fiction",
-        "date": "2024-05-26",
+        "description": "An exhibition featuring masterpieces from the Dutch Golden Age.",
+        "image_url": "https://www.holland.com/upload_mm/2/8/9/83482_fullimage_vrouw%20bekijkt%20de%20bedreigde%20zwaan%2C%20nederlandse%20schilder%20jan%20asselijn%20in%20het%20rijksmuseum.jpg",
+        "begin_time": "2024-08-20T09:00:00",
+        "end_time": "2024-08-20T17:00:00",
         "longitude": 4.885219,
         "latitude": 52.360007
       }
@@ -35,13 +35,19 @@
     "events": [
       {
         "event": "Van Gogh's Sunflowers",
-        "date": "2024-08-10",
+        "description": "Explore the famous Sunflowers series by Vincent van Gogh.",
+        "image_url": "https://cdn.overstockart.com/blog/wp-content/uploads/2012/01/vangogh-sunflowers.jpg",
+        "begin_time": "2024-08-10T11:00:00",
+        "end_time": "2024-08-10T19:00:00",
         "longitude": 4.881100,
         "latitude": 52.358416
       },
       {
         "event": "Van Gogh and Japan",
-        "date": "2024-09-15",
+        "description": "A special exhibition on Van Gogh's fascination with Japanese art.",
+        "image_url": "https://assets.vangoghmuseum.nl/edae22cb-ee66-495c-9d4e-155b3c432fb2?w=1280&h=720&x=0&y=506&cropWidth=4000&cropHeight=2040&c=949833d6ebb6775a71ae9b176e1fcf94d46b453cb7aad09d48e7d9ad9ac5cfa8",
+        "begin_time": "2024-09-15T10:00:00",
+        "end_time": "2024-09-15T18:00:00",
         "longitude": 4.881100,
         "latitude": 52.358416
       }
@@ -56,13 +62,19 @@
     "events": [
       {
         "event": "Anne Frank: A History for Today",
-        "date": "2024-09-05",
+        "description": "An exhibition detailing the life and times of Anne Frank.",
+        "image_url": "https://thecjn.ca/wp-content/uploads/2021/04/159146462_4502560399760758_923475097583119203_n.jpg",
+        "begin_time": "2024-09-05T09:00:00",
+        "end_time": "2024-09-05T17:00:00",
         "longitude": 4.883160,
         "latitude": 52.375218
       },
       {
         "event": "Diary of Anne Frank",
-        "date": "2024-10-12",
+        "description": "An exhibit focusing on the famous diary written by Anne Frank.",
+        "image_url": "https://m.media-amazon.com/images/S/pv-target-images/3f4b73429580fa67f830069cc5a109069610204b1d7c4cf0d7a184898c7930fc.jpg",
+        "begin_time": "2024-10-12T09:00:00",
+        "end_time": "2024-10-12T17:00:00",
         "longitude": 4.883160,
         "latitude": 52.375218
       }
@@ -77,13 +89,19 @@
     "events": [
       {
         "event": "Modern Art Collection",
-        "date": "2024-06-25",
+        "description": "A collection showcasing modern art pieces.",
+        "image_url": "https://s3-eu-west-1.amazonaws.com/production-static-stedelijk/images/_collectie/2023/Collectiepagina/scaled/1024/063.SM-VASTE%20COLL.WISSELING%202022.PH.GJ.vanROOIJ.jpg",
+        "begin_time": "2024-06-25T10:00:00",
+        "end_time": "2024-06-25T18:00:00",
         "longitude": 4.879566,
         "latitude": 52.358346
       },
       {
         "event": "Photography Exhibition",
-        "date": "2024-07-30",
+        "description": "A special exhibition featuring contemporary photography.",
+        "image_url": "https://artblart.com/wp-content/uploads/2014/07/installation-c-web.jpg",
+        "begin_time": "2024-07-30T10:00:00",
+        "end_time": "2024-07-30T18:00:00",
         "longitude": 4.879566,
         "latitude": 52.358346
       }
@@ -98,13 +116,19 @@
     "events": [
       {
         "event": "Girl with a Pearl Earring",
-        "date": "2024-07-20",
+        "description": "Come see the iconic painting by Vermeer.",
+        "image_url": "https://th-thumbnailer.cdn-si-edu.com/fI79GTPU0SQ3ZcxNsy6g-Y1M1ZI=/fit-in/1600x0/filters:focal(1571x1047:1572x1048)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/14/c6/14c6b684-369b-4a21-a56c-70a3ad0c54d4/gettyimages-1244266290.jpg",
+        "begin_time": "2024-07-20T10:00:00",
+        "end_time": "2024-07-20T17:00:00",
         "longitude": 4.313565,
         "latitude": 52.080985
       },
       {
         "event": "Dutch Golden Age",
-        "date": "2024-08-18",
+        "description": "Explore the art from the Dutch Golden Age.",
+        "image_url": "https://glasgowmuseumsslavery.co.uk/wp-content/uploads/2021/11/622_01.jpg?w=1200",
+        "begin_time": "2024-08-18T09:00:00",
+        "end_time": "2024-08-18T17:00:00",
         "longitude": 4.313565,
         "latitude": 52.080985
       }
@@ -120,14 +144,22 @@
       {
         "event": "Surrealism Exhibition",
         "date": "2024-09-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.466989,
-        "latitude": 51.914927
+        "latitude": 51.914927,
+        "image_url": "https://example.com/surrealism_exhibition.jpg",
+        "description": "Explore the world of surrealism through this extensive exhibition."
       },
       {
         "event": "Dutch Design",
         "date": "2024-11-10",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.466989,
-        "latitude": 51.914927
+        "latitude": 51.914927,
+        "image_url": "https://example.com/dutch_design.jpg",
+        "description": "A comprehensive exhibition showcasing Dutch design."
       }
     ]
   },
@@ -141,14 +173,22 @@
       {
         "event": "Mondrian & De Stijl",
         "date": "2024-08-05",
+        "begin_time": "09:00",
+        "end_time": "17:00",
         "longitude": 4.284505,
-        "latitude": 52.089491
+        "latitude": 52.089491,
+        "image_url": "https://example.com/mondrian_de_stijl.jpg",
+        "description": "Discover the iconic works of Mondrian and the De Stijl movement."
       },
       {
         "event": "Dutch Contemporary Art",
         "date": "2024-10-20",
+        "begin_time": "09:00",
+        "end_time": "17:00",
         "longitude": 4.284505,
-        "latitude": 52.089491
+        "latitude": 52.089491,
+        "image_url": "https://example.com/dutch_contemporary_art.jpg",
+        "description": "A vibrant exhibition featuring contemporary Dutch artists."
       }
     ]
   },
@@ -162,14 +202,22 @@
       {
         "event": "Dutch Portraiture",
         "date": "2024-09-10",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.637287,
-        "latitude": 52.379189
+        "latitude": 52.379189,
+        "image_url": "https://example.com/dutch_portraiture.jpg",
+        "description": "An exhibition dedicated to the art of Dutch portraiture."
       },
       {
         "event": "17th Century Masters",
         "date": "2024-11-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.637287,
-        "latitude": 52.379189
+        "latitude": 52.379189,
+        "image_url": "https://example.com/17th_century_masters.jpg",
+        "description": "Explore masterpieces from the Dutch Golden Age."
       }
     ]
   },
@@ -183,14 +231,22 @@
       {
         "event": "Jheronimus Bosch Exhibition",
         "date": "2024-07-22",
+        "begin_time": "09:30",
+        "end_time": "17:30",
         "longitude": 5.297844,
-        "latitude": 51.688029
+        "latitude": 51.688029,
+        "image_url": "https://example.com/jheronimus_bosch.jpg",
+        "description": "Dive into the fantastical world of Jheronimus Bosch."
       },
       {
         "event": "Modern Art in Brabant",
         "date": "2024-09-18",
+        "begin_time": "09:30",
+        "end_time": "17:30",
         "longitude": 5.297844,
-        "latitude": 51.688029
+        "latitude": 51.688029,
+        "image_url": "https://example.com/modern_art_brabant.jpg",
+        "description": "A showcase of modern art from the Brabant region."
       }
     ]
   },
@@ -204,14 +260,22 @@
       {
         "event": "Van Gogh Collection",
         "date": "2024-08-28",
+        "begin_time": "10:00",
+        "end_time": "17:00",
         "longitude": 5.820749,
-        "latitude": 52.099267
+        "latitude": 52.099267,
+        "image_url": "https://example.com/van_gogh_collection.jpg",
+        "description": "View an extensive collection of works by Vincent van Gogh."
       },
       {
         "event": "Sculpture Garden Tour",
         "date": "2024-10-10",
+        "begin_time": "10:00",
+        "end_time": "17:00",
         "longitude": 5.820749,
-        "latitude": 52.099267
+        "latitude": 52.099267,
+        "image_url": "https://example.com/sculpture_garden.jpg",
+        "description": "Guided tours of the museum's famous sculpture garden."
       }
     ]
   },
@@ -225,14 +289,22 @@
       {
         "event": "Maritime History",
         "date": "2024-07-19",
+        "begin_time": "09:00",
+        "end_time": "17:00",
         "longitude": 5.290566,
-        "latitude": 52.710820
+        "latitude": 52.710820,
+        "image_url": "https://example.com/maritime_history.jpg",
+        "description": "An exhibition on the maritime history of the Zuiderzee."
       },
       {
         "event": "Traditional Dutch Crafts",
         "date": "2024-09-30",
+        "begin_time": "09:00",
+        "end_time": "17:00",
         "longitude": 5.290566,
-        "latitude": 52.710820
+        "latitude": 52.710820,
+        "image_url": "https://example.com/dutch_crafts.jpg",
+        "description": "Experience traditional Dutch crafts and culture."
       }
     ]
   },
@@ -246,14 +318,22 @@
       {
         "event": "Future Technology",
         "date": "2024-08-12",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.912202,
-        "latitude": 52.374029
+        "latitude": 52.374029,
+        "image_url": "https://example.com/future_technology.jpg",
+        "description": "Explore the latest advancements in technology."
       },
       {
         "event": "Interactive Science",
         "date": "2024-11-05",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.912202,
-        "latitude": 52.374029
+        "latitude": 52.374029,
+        "image_url": "https://example.com/interactive_science.jpg",
+        "description": "Hands-on science exhibits for all ages."
       }
     ]
   },
@@ -267,14 +347,22 @@
       {
         "event": "Natural History Exhibits",
         "date": "2024-09-25",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.646219,
-        "latitude": 52.387186
+        "latitude": 52.387186,
+        "image_url": "https://example.com/natural_history.jpg",
+        "description": "Discover fascinating exhibits on natural history."
       },
       {
         "event": "Scientific Instruments",
         "date": "2024-12-01",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.646219,
-        "latitude": 52.387186
+        "latitude": 52.387186,
+        "image_url": "https://example.com/scientific_instruments.jpg",
+        "description": "An exhibition showcasing historical scientific instruments."
       }
     ]
   },
@@ -288,14 +376,22 @@
       {
         "event": "CoBrA Movement",
         "date": "2024-08-15",
+        "begin_time": "11:00",
+        "end_time": "19:00",
         "longitude": 4.859083,
-        "latitude": 52.300848
+        "latitude": 52.300848,
+        "image_url": "https://example.com/cobra_movement.jpg",
+        "description": "An exhibition dedicated to the CoBrA art movement."
       },
       {
         "event": "Abstract Art",
         "date": "2024-10-20",
+        "begin_time": "11:00",
+        "end_time": "19:00",
         "longitude": 4.859083,
-        "latitude": 52.300848
+        "latitude": 52.300848,
+        "image_url": "https://example.com/abstract_art.jpg",
+        "description": "Explore the world of abstract art in this comprehensive exhibition."
       }
     ]
   },
@@ -309,14 +405,22 @@
       {
         "event": "WWII Resistance",
         "date": "2024-09-10",
+        "begin_time": "09:00",
+        "end_time": "17:00",
         "longitude": 4.912506,
-        "latitude": 52.366867
+        "latitude": 52.366867,
+        "image_url": "https://example.com/wwii_resistance.jpg",
+        "description": "An exhibition on the Dutch resistance during WWII."
       },
       {
         "event": "Dutch Heroes",
         "date": "2024-11-25",
+        "begin_time": "09:00",
+        "end_time": "17:00",
         "longitude": 4.912506,
-        "latitude": 52.366867
+        "latitude": 52.366867,
+        "image_url": "https://example.com/dutch_heroes.jpg",
+        "description": "Celebrate the Dutch heroes who fought for freedom."
       }
     ]
   }

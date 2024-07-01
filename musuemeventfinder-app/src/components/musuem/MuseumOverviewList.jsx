@@ -15,7 +15,7 @@ const MuseumOverviewList = ({navigation}) => {
                           numColumns={1}
                           horizontal={false}
                           renderItem={({item}) => <TouchableHighlight className={""}><MusuemOviewCard navigation={navigation}
-                              title={item.museum} id={item._id}  long={item.longitude} lat={item.latitude} events={item.events}/></TouchableHighlight>}
+                              title={item.museum} id={item._id} img={item.image_url} long={item.longitude} lat={item.latitude} events={item.events}/></TouchableHighlight>}
                 />
             </View>
         </SafeAreaView>
