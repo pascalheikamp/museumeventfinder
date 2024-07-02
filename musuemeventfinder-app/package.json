@@ -22,7 +22,8 @@
     "react-native-screens": "3.31.1",
     "react-native-super-grid": "^6.0.1",
     "react-native-svg": "^15.3.0",
-    "react-native-webview": "13.8.6"
+    "react-native-webview": "13.8.6",
+    "expo-linear-gradient": "~13.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

@@ -10,8 +10,9 @@
         "event": "Rembrandt Exhibition",
         "description": "A comprehensive exhibition showcasing the works of Rembrandt.",
         "image_url": "https://i.guim.co.uk/img/media/550d1c5bf2649d7c3807a8df420bb1121db876c7/103_417_2849_1710/master/2849.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=9409bc24ef2e2c9a0a2976845da4296c",
-        "begin_time": "2024-07-15T10:00:00",
-        "end_time": "2024-07-15T18:00:00",
+        "date": "2024-09-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.885219,
         "latitude": 52.360007
       },
@@ -19,8 +20,9 @@
         "event": "Dutch Masters",
         "description": "An exhibition featuring masterpieces from the Dutch Golden Age.",
         "image_url": "https://www.holland.com/upload_mm/2/8/9/83482_fullimage_vrouw%20bekijkt%20de%20bedreigde%20zwaan%2C%20nederlandse%20schilder%20jan%20asselijn%20in%20het%20rijksmuseum.jpg",
-        "begin_time": "2024-08-20T09:00:00",
-        "end_time": "2024-08-20T17:00:00",
+        "date": "2024-09-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.885219,
         "latitude": 52.360007
       }
@@ -37,8 +39,9 @@
         "event": "Van Gogh's Sunflowers",
         "description": "Explore the famous Sunflowers series by Vincent van Gogh.",
         "image_url": "https://cdn.overstockart.com/blog/wp-content/uploads/2012/01/vangogh-sunflowers.jpg",
-        "begin_time": "2024-08-10T11:00:00",
-        "end_time": "2024-08-10T19:00:00",
+        "date": "2024-09-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.881100,
         "latitude": 52.358416
       },
@@ -46,8 +49,9 @@
         "event": "Van Gogh and Japan",
         "description": "A special exhibition on Van Gogh's fascination with Japanese art.",
         "image_url": "https://assets.vangoghmuseum.nl/edae22cb-ee66-495c-9d4e-155b3c432fb2?w=1280&h=720&x=0&y=506&cropWidth=4000&cropHeight=2040&c=949833d6ebb6775a71ae9b176e1fcf94d46b453cb7aad09d48e7d9ad9ac5cfa8",
-        "begin_time": "2024-09-15T10:00:00",
-        "end_time": "2024-09-15T18:00:00",
+        "date": "2024-09-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.881100,
         "latitude": 52.358416
       }
@@ -64,8 +68,9 @@
         "event": "Anne Frank: A History for Today",
         "description": "An exhibition detailing the life and times of Anne Frank.",
         "image_url": "https://thecjn.ca/wp-content/uploads/2021/04/159146462_4502560399760758_923475097583119203_n.jpg",
-        "begin_time": "2024-09-05T09:00:00",
-        "end_time": "2024-09-05T17:00:00",
+        "date": "2024-09-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.883160,
         "latitude": 52.375218
       },
@@ -73,8 +78,9 @@
         "event": "Diary of Anne Frank",
         "description": "An exhibit focusing on the famous diary written by Anne Frank.",
         "image_url": "https://m.media-amazon.com/images/S/pv-target-images/3f4b73429580fa67f830069cc5a109069610204b1d7c4cf0d7a184898c7930fc.jpg",
-        "begin_time": "2024-10-12T09:00:00",
-        "end_time": "2024-10-12T17:00:00",
+        "date": "2024-09-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.883160,
         "latitude": 52.375218
       }
@@ -91,8 +97,9 @@
         "event": "Modern Art Collection",
         "description": "A collection showcasing modern art pieces.",
         "image_url": "https://s3-eu-west-1.amazonaws.com/production-static-stedelijk/images/_collectie/2023/Collectiepagina/scaled/1024/063.SM-VASTE%20COLL.WISSELING%202022.PH.GJ.vanROOIJ.jpg",
-        "begin_time": "2024-06-25T10:00:00",
-        "end_time": "2024-06-25T18:00:00",
+        "date": "2024-09-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.879566,
         "latitude": 52.358346
       },
@@ -100,8 +107,9 @@
         "event": "Photography Exhibition",
         "description": "A special exhibition featuring contemporary photography.",
         "image_url": "https://artblart.com/wp-content/uploads/2014/07/installation-c-web.jpg",
-        "begin_time": "2024-07-30T10:00:00",
-        "end_time": "2024-07-30T18:00:00",
+        "date": "2024-09-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.879566,
         "latitude": 52.358346
       }
@@ -118,8 +126,9 @@
         "event": "Girl with a Pearl Earring",
         "description": "Come see the iconic painting by Vermeer.",
         "image_url": "https://th-thumbnailer.cdn-si-edu.com/fI79GTPU0SQ3ZcxNsy6g-Y1M1ZI=/fit-in/1600x0/filters:focal(1571x1047:1572x1048)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/14/c6/14c6b684-369b-4a21-a56c-70a3ad0c54d4/gettyimages-1244266290.jpg",
-        "begin_time": "2024-07-20T10:00:00",
-        "end_time": "2024-07-20T17:00:00",
+        "date": "2024-09-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.313565,
         "latitude": 52.080985
       },
@@ -127,8 +136,9 @@
         "event": "Dutch Golden Age",
         "description": "Explore the art from the Dutch Golden Age.",
         "image_url": "https://glasgowmuseumsslavery.co.uk/wp-content/uploads/2021/11/622_01.jpg?w=1200",
-        "begin_time": "2024-08-18T09:00:00",
-        "end_time": "2024-08-18T17:00:00",
+        "date": "2024-09-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
         "longitude": 4.313565,
         "latitude": 52.080985
       }
