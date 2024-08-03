@@ -54,6 +54,16 @@
         "end_time": "18:00",
         "longitude": 4.881100,
         "latitude": 52.358416
+      },
+      {
+        "event": "Van Gogh and Japan",
+        "description": "A special exhibition on Van Gogh's fascination with Japanese art.",
+        "image_url": "https://assets.vangoghmuseum.nl/edae22cb-ee66-495c-9d4e-155b3c432fb2?w=1280&h=720&x=0&y=506&cropWidth=4000&cropHeight=2040&c=949833d6ebb6775a71ae9b176e1fcf94d46b453cb7aad09d48e7d9ad9ac5cfa8",
+        "date": "2024-09-15",
+        "begin_time": "10:00",
+        "end_time": "18:00",
+        "longitude": 4.881100,
+        "latitude": 52.358416
       }
     ]
   },
