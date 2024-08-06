@@ -2,10 +2,13 @@ import {Pressable, StyleSheet, Text, View} from "react-native";
 import {useState, useEffect, useRef} from "react";
 import MapView, {Marker} from "react-native-maps";
 import * as Location from 'expo-location';
+import {Accuracy} from "expo-location";
 
 const HomeScreen = ({navigation, route}) => {
     const {longitude, latitude} = route.params || {};
     const mapRef = useRef(null);
+    const [initialRegion, setInitialRegion] = useState(null);
+    const [userLocation, setUserLocation] = useState(null);
     const [location, setLocation] = useState(null);
     const [errorMsg, setErrorMsg] = useState(null);
 
@@ -15,11 +18,24 @@ const HomeScreen = ({navigation, route}) => {
             if (status !== 'granted') {
                 setErrorMsg('Permission to access location was denied');
                 return;
+            } else {
+                await Location.watchPositionAsync({accuracy: Accuracy.Balanced}, (loc) => {
+                    setUserLocation({
+                        longitude:longitude,
+                        latitude:latitude
+                    })
+                })
             }
 
             let location = await Location.getCurrentPositionAsync({});
             const newData = {latitude:latitude}
             setLocation(location);
+            setInitialRegion({
+                latitude: location.coords.latitude,
+                longitude: location.coords.longitude,
+                latitudeDelta: 0.005,
+                longitudeDelta: 0.005,
+            });
         })();
     }, []);
 
@@ -29,19 +45,20 @@ const HomeScreen = ({navigation, route}) => {
     } else if (location) {
         text = JSON.stringify(location);
     }
-    useEffect(() => {
+
         if (latitude && longitude) {
-            setLocation((prevRegion) => ({
-                ...prevRegion,
-                latitude,
-                longitude,
-            }));
+
+            if(mapRef.current) {
+                console.log("latitude" + latitude + "longitude " + longitude)
+                mapRef.current.animateToRegion({
+                    latitude,
+                    longitude,
+                    latitudeDelta: 0.005,
+                    longitudeDelta: 0.005,
+                }, 1000)
+            }
         }
 
-        if(mapRef.current) {
-            mapRef.current.animateToRegion(location, 1000)
-        }
-    }, [latitude, longitude]);
     //
     return (
         <View style={styles.container}>
@@ -49,14 +66,12 @@ const HomeScreen = ({navigation, route}) => {
                 <MapView
                     ref={mapRef}
                     style={styles.map}
-                    // onRegionChangeComplete={(location) => setLocation(location)}
-                    Region={{
-                        latitude: longitude && latitude === undefined ?location.coords.latitude : latitude,
-                        longitude: longitude && latitude === undefined ?location.coords.latitude : longitude,
-                        latitudeDelta: 0.0922,
-                        longitudeDelta: 0.0421,
-                    }}
+                    initialRegion={initialRegion}
                 >
+                    <Marker coordinate={{
+                        latitude: userLocation.latitude,
+                        longitude: userLocation.longitude
+                    }}></Marker>
                     <Marker
                         coordinate={{
                             latitude: longitude && latitude === undefined ?location.coords.latitude : latitude,
