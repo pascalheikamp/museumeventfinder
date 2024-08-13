@@ -5,7 +5,6 @@ import MusuemOviewCard from "./MusuemOviewCard";
 const MuseumOverviewList = ({navigation}) => {
     const museums = useFetch('https://raw.githubusercontent.com/pascalheikamp/museumeventfinder/main/musuemeventfinder-app/dutch_museum_events.json');
     const museumEvents = museums.data
-    console.log(museumEvents);
 
     return (
         <SafeAreaView>
@@ -32,7 +31,6 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     List: {
-        backgroundColor: "white",
         height: "auto"
     }
 })

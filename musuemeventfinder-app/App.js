@@ -7,31 +7,40 @@ import {DarkTheme, DefaultTheme, NavigationContainer} from "@react-navigation/na
 import EventScreen from "./src/screens/EventScreen";
 import ProfileScreen from "./src/screens/ProfileScreen";
 import {useEffect, useState} from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function App() {
     const [colorTheme, setColorTheme] = useState(useColorScheme() == "light" ? DefaultTheme : DarkTheme)
     useEffect(() => {
-
+        async function getThemeOptions() {
+            const mode = JSON.parse(await AsyncStorage.getItem("colorTheme"));
+            if (typeof mode !== "undefined") {
+                setColorTheme(mode ? DarkTheme : DefaultTheme)
+            }
+        }
+        getThemeOptions();
     }, []);
-  const Tab = createBottomTabNavigator();
-  return (
-   <NavigationContainer theme={colorTheme}>
-     <StatusBar/>
-      <Tab.Navigator>
-        <Tab.Screen name={"Home"} component={HomeScreen}/>
-          <Tab.Screen name={"Events"} component={EventScreen}/>
-        <Tab.Screen name={"Museums"} component={MuseumScreen}/>
-          <Tab.Screen name={"Profile"} component={ProfileScreen}/>
-      </Tab.Navigator>
-   </NavigationContainer>
-  );
+    const Tab = createBottomTabNavigator();
+    return (
+        <NavigationContainer theme={colorTheme}>
+            <StatusBar/>
+            <Tab.Navigator>
+                <Tab.Screen name={"Home"} component={HomeScreen}/>
+                <Tab.Screen name={"Events"} component={EventScreen}/>
+                <Tab.Screen name={"Museums"} component={MuseumScreen}/>
+                <Tab.Screen name="Profile">
+                    {(props) => <ProfileScreen  {...props} setColorTheme={setColorTheme} />}
+                </Tab.Screen>
+            </Tab.Navigator>
+        </NavigationContainer>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });

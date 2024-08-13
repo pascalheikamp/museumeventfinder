@@ -1,8 +1,20 @@
-import {Pressable, StyleSheet, Text, View} from "react-native";
+import {
+    Image,
+    Pressable,
+    StyleSheet,
+    Text,
+    Touchable,
+    TouchableHighlight,
+    TouchableOpacity,
+    useColorScheme,
+    View
+} from "react-native";
 import {useState, useEffect, useRef} from "react";
-import MapView, {Marker} from "react-native-maps";
+import MapView, {Marker, PROVIDER_GOOGLE} from "react-native-maps";
 import * as Location from 'expo-location';
 import {Accuracy} from "expo-location";
+import {useTheme} from "@react-navigation/native";
+import DarkLightMode from '../../assets/darklighmode-icon.png'
 
 const HomeScreen = ({navigation, route}) => {
     const {longitude, latitude} = route.params || {};
@@ -11,8 +23,10 @@ const HomeScreen = ({navigation, route}) => {
     const [userLocation, setUserLocation] = useState(null);
     const [location, setLocation] = useState(null);
     const [errorMsg, setErrorMsg] = useState(null);
+    const {dark} = useTheme();
 
-    useEffect(() => {
+    //Ask permission for user location and retrieve the information of the coordinates
+        useEffect(() => {
         (async () => {
             let {status} = await Location.requestForegroundPermissionsAsync();
             if (status !== 'granted') {
@@ -28,7 +42,6 @@ const HomeScreen = ({navigation, route}) => {
             }
 
             let location = await Location.getCurrentPositionAsync({});
-            const newData = {latitude:latitude}
             setLocation(location);
             setInitialRegion({
                 latitude: location.coords.latitude,
@@ -47,7 +60,7 @@ const HomeScreen = ({navigation, route}) => {
     }
 
         if (latitude && longitude) {
-
+        // the longitude and latitude are used to show the location of the museum
             if(mapRef.current) {
                 console.log("latitude" + latitude + "longitude " + longitude)
                 mapRef.current.animateToRegion({
@@ -64,8 +77,10 @@ const HomeScreen = ({navigation, route}) => {
         <View style={styles.container}>
             {location ? (
                 <MapView
+                    showsUserLocation={true}
                     ref={mapRef}
                     style={styles.map}
+                    userInterfaceStyle={dark? "dark" : "light"}
                     initialRegion={initialRegion}
                 >
                     <Marker coordinate={{

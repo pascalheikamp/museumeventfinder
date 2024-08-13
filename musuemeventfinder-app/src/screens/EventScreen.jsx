@@ -7,8 +7,7 @@ import MusuemOviewCard from "../components/musuem/MusuemOviewCard";
 function EventScreen({ route }) {
     const { id, events, name } = route.params || {};
 
-    const currentEvents = events.map((e) => (e));
-    console.log(currentEvents);
+    const currentEvents = events?.map((e) => (e));
 
     return (
         <View style={styles.container}>
@@ -17,24 +16,6 @@ function EventScreen({ route }) {
                 colors={['rgba(26,29,46,1)', 'rgba(75,116,168,1)']}
                 style={styles.background}
             >
-                {/*<FlatGrid*/}
-                {/*    itemDimension={200}*/}
-                {/*    style={styles.gridView}*/}
-                {/*    horizontal={false}*/}
-                {/*    spacing={10}*/}
-                {/*    data={currentEvents}*/}
-                {/*    renderItem={({ item }) => (*/}
-                {/*        <EventOverviewCard*/}
-                {/*            title={item.event}*/}
-                {/*            description={item.description}*/}
-                {/*            date={item.date}*/}
-                {/*            begin={item.begin_time}*/}
-                {/*            end={item.end_time}*/}
-                {/*            img={item.image_url}*/}
-                {/*        />*/}
-                {/*    )}*/}
-                {/*    style={styles.list}*/}
-                {/*/>*/}
                 <FlatList style={styles.List}
                           data={currentEvents}
                           horizontal={true}
