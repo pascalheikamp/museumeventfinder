@@ -34,8 +34,8 @@ export default function ProfileScreen({setColorTheme}) {
         // Function to handle closing settings menu
         setShowSettings(false);
     };
+    // this will check if its a dark theme and change the theme if you toggle the button
     const toggleTheme = async () => {
-        console.log(dark);
         if (dark) {
             console.log("turn to light")
             setColorTheme(DefaultTheme)
@@ -43,6 +43,7 @@ export default function ProfileScreen({setColorTheme}) {
             console.log("turn to dark")
             setColorTheme(DarkTheme)
         }
+        //it will save the colorTheme in async storage so the application remember the last theme setting
         try {
             await AsyncStorage.setItem('colorTheme', JSON.stringify(!dark));
         } catch (e) {

@@ -3,6 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import MusuemOviewCard from "./MusuemOviewCard";
 
 const MuseumOverviewList = ({navigation}) => {
+    //creating an own hook function that is reusable for fetching data for museums
     const museums = useFetch('https://raw.githubusercontent.com/pascalheikamp/museumeventfinder/main/musuemeventfinder-app/dutch_museum_events.json');
     const museumEvents = museums.data
 

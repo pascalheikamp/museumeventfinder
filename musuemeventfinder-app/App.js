@@ -12,6 +12,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 export default function App() {
     const [colorTheme, setColorTheme] = useState(useColorScheme() == "light" ? DefaultTheme : DarkTheme)
     useEffect(() => {
+
+        // retrieving the theme setting in the async storage so the settings will be applied in the applications
         async function getThemeOptions() {
             const mode = JSON.parse(await AsyncStorage.getItem("colorTheme"));
             if (typeof mode !== "undefined") {

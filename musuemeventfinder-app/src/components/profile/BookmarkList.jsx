@@ -17,82 +17,70 @@ import DeleteIcon from '../../../assets/delete-icon.png';
 import DeleteIconDarkMode from '../../../assets/deleteicon-darkmode.png';
 
 function BookmarkList({navigation}) {
-    const [products, setProducts] = useState([]);
-    const [totalProducts, setTotalProducts] = useState({});
-    const [duplicateProducts, setDuplicateProducts] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(0);
+    const [events, setEvents] = useState([]);
+    const [totalEvents, setTotalEvents] = useState({});
+    const [duplicateEvents, setDuplicateEvents] = useState([]);
 
     useFocusEffect(
         useCallback(() => {
-            const loadProducts = async () => {
-                const stringifiedProducts = await AsyncStorage.getItem("events");
-                const parsedProducts = JSON.parse(stringifiedProducts);
-                if (!parsedProducts || !Array.isArray(parsedProducts)) return;
+            //loading the events from async storage and make this an object so I can use it for other functionalities like removing an event
+            const loadEvents = async () => {
+                const stringifiedEvents = await AsyncStorage.getItem("events");
+                const parsedEvents = JSON.parse(stringifiedEvents);
+                if (!parsedEvents || !Array.isArray(parsedEvents)) return;
 
-                setProducts(parsedProducts);
-                countProductNames(parsedProducts);
+                setEvents(parsedEvents);
+                countEventNames(parsedEvents);
             };
 
-            loadProducts();
+            loadEvents();
 
             return () => {
                 console.log('Screen is unfocused');
             };
         }, [])
     );
-
+    //this function will remove all events in async storage
     const removeList = async () => {
         try {
             await AsyncStorage.removeItem("events");
-            setProducts([]);
-            setDuplicateProducts([]);
-            setTotalProducts({});
-            setTotalPrice(0);
+            setEvents([]);
+            setDuplicateEvents([]);
+            setTotalEvents({});
         } catch (exception) {
             console.log(exception);
         }
     }
-
+    //this function will remove an event from the async storage
     const removeItem = async (item) => {
         try {
-            let updatedProducts = [...products];
+            let updatedProducts = [...events];
             const index = updatedProducts.indexOf(item);
 
             if (index !== -1) {
                 updatedProducts.splice(index, 1);
                 await AsyncStorage.setItem("events", JSON.stringify(updatedProducts));
-                setProducts(updatedProducts);
-                countProductNames(updatedProducts);
+                setEvents(updatedProducts);
+                countEventNames(updatedProducts);
             }
         } catch (exception) {
             console.log(exception);
         }
     }
-
-    const addItem = async (item) => {
-        try {
-            const updatedProducts = [...products, {...item}];
-            await AsyncStorage.setItem("events", JSON.stringify(updatedProducts));
-            setProducts(updatedProducts);
-            countProductNames(updatedProducts);
-        } catch (exception) {
-            console.log(exception);
-        }
-    }
-
-    const countProductNames = (products) => {
+    //this function will check if event is duplicate and show only event with that specific name using the filter method
+    const countEventNames = (products) => {
         const counts = products.reduce((acc, product) => {
             acc[product.title] = (acc[product.title] || 0) + 1;
             return acc;
         }, {});
 
-        setTotalProducts(counts);
+        setTotalEvents(counts);
 
         const duplicates = products.filter((product, index, self) =>
             counts[product.title] > 0 && self.findIndex(p => p.title === product.title) === index
         );
 
-        setDuplicateProducts(duplicates);
+        setDuplicateEvents(duplicates);
 
         const total = products.reduce((sum, product) => {
             return sum + product.price;
@@ -125,22 +113,24 @@ function BookmarkList({navigation}) {
                 </View>
             </TouchableHighlight>
         ),
-        [totalProducts]
+        [totalEvents]
     );
 
     return (
+        <View>
+            <Pressable style={styles.deleteShoppingList} onPress={removeList}>
+                <Text style={styles.deleteShoppingListText}>Verwijder lijst</Text>
+            </Pressable>
         <View style={dark ? {
             backgroundColor: '#393e46'
         } : {backgroundColor: colors.background}}>
             <FlatList style={styles.ShoppingListBackGround}
                       className={"mt-3"}
-                      data={duplicateProducts}
+                      data={duplicateEvents}
                       horizontal={false}
                       renderItem={renderItem}
             />
-            <Pressable style={styles.deleteShoppingList} onPress={removeList}>
-                <Text style={styles.deleteShoppingListText}>Verwijder lijst</Text>
-            </Pressable>
+        </View>
         </View>
     );
 }

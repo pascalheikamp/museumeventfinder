@@ -17,7 +17,7 @@ function EventScreen({ route }) {
                 style={styles.background}
             >
                 <FlatList style={styles.List}
-                          data={currentEvents}
+                          data={currentEvents }
                           horizontal={true}
                           renderItem={({item}) => <EventOverviewCard
                               title={item.event}

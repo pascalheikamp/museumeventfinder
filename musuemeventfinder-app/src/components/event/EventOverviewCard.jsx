@@ -12,6 +12,7 @@ import {useTheme} from "@react-navigation/native";
 
 function EventOverviewCard({title, img, description, date, begin, end}) {
 
+    // this object will be saved as bookmark
     const event = {
         title: title,
         description: description,
@@ -19,9 +20,9 @@ function EventOverviewCard({title, img, description, date, begin, end}) {
         begin: begin,
         end: end
     }
-    const {colors} = useTheme();
-    const {dark} = useTheme();
+    const {colors, dark} = useTheme();
 
+    //this function will add an event to the async storage so its possible to save bookmarks
     async function addToBookmarkAsync() {
         try {
             let storage = await AsyncStorage.getItem("events")
